@@ -9,7 +9,7 @@ Red Spark 是一个自定义 Codex 动态宠物：戴红帽的 Q 版冒险者，
 在本仓库中运行：
 
 ```powershell
-.\scripts\install.ps1
+python .\scripts\install.py
 ```
 
 也可以手动把宠物目录复制到 Codex 的 pets 目录：
@@ -33,7 +33,7 @@ assets/action-sheets/running.png
 然后重新构建可安装的宠物包：
 
 ```powershell
-.\scripts\build.ps1
+python .\scripts\build.py
 ```
 
 构建脚本会复用本地 Codex 的 `hatch-pet` skill 脚本，并重新生成：
@@ -47,7 +47,7 @@ assets/action-sheets/running.png
 重新构建后，再运行一次安装脚本：
 
 ```powershell
-.\scripts\install.ps1
+python .\scripts\install.py
 ```
 
 ## 构建要求
@@ -75,8 +75,8 @@ python -m pip install -r requirements.txt
 - `preview/contact-sheet.png`：展示所有动画状态的 QA 联系表。
 - `preview/validation.json`：图集校验输出。
 - `preview/review.json`：帧提取和组件 QA 输出。
-- `scripts/build.ps1`：从动作条源图重新构建宠物包。
-- `scripts/install.ps1`：安装到本地 Codex pets 目录。
+- `scripts/build.py`：从动作条源图重新构建宠物包。
+- `scripts/install.py`：安装到本地 Codex pets 目录。
 - `AGENTS.md`：供后续 Codex 工作使用的项目指导。
 
 ## 动画状态

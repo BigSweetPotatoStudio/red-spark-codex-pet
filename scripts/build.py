@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import shutil
 import subprocess
@@ -18,6 +19,8 @@ FINAL_DIR = BUILD_DIR / "final"
 QA_DIR = BUILD_DIR / "qa"
 PET_DIR = ROOT / "pets" / "red-spark"
 PREVIEW_DIR = ROOT / "preview"
+CELL_WIDTH = 192
+CELL_HEIGHT = 208
 
 STATES = [
     "idle",
@@ -57,6 +60,95 @@ def prepare_build_dir() -> None:
     DECODED_DIR.mkdir(parents=True)
     for state in STATES:
         shutil.copy2(ACTION_DIR / f"{state}.png", DECODED_DIR / f"{state}.png")
+
+
+def preserve_jumping_motion_frames() -> None:
+    """Keep the source strip's vertical jump arc after component extraction."""
+    from PIL import Image
+
+    frame_count = 5
+    chroma_key = (255, 0, 255)
+    key_threshold = 96.0
+
+    def is_key(red: int, green: int, blue: int) -> bool:
+        return math.sqrt(
+            (red - chroma_key[0]) ** 2
+            + (green - chroma_key[1]) ** 2
+            + (blue - chroma_key[2]) ** 2
+        ) <= key_threshold
+
+    source_path = ACTION_DIR / "jumping.png"
+    with Image.open(source_path) as opened:
+        strip = opened.convert("RGBA")
+
+    slot_width = strip.width / frame_count
+    sprites: list[dict[str, object]] = []
+    for index in range(frame_count):
+        left = round(index * slot_width)
+        right = round((index + 1) * slot_width)
+        slot = strip.crop((left, 0, right, strip.height))
+        pixels = slot.load()
+        for y in range(slot.height):
+            for x in range(slot.width):
+                red, green, blue, alpha = pixels[x, y]
+                if is_key(red, green, blue):
+                    pixels[x, y] = (red, green, blue, 0)
+        bbox = slot.getbbox()
+        if bbox is None:
+            raise SystemExit(f"empty jumping frame slot: {index}")
+        sprites.append({"slot": slot, "bbox": bbox})
+
+    max_width = max(sprite["bbox"][2] - sprite["bbox"][0] for sprite in sprites)
+    max_height = max(sprite["bbox"][3] - sprite["bbox"][1] for sprite in sprites)
+    source_top_min = min(sprite["bbox"][1] for sprite in sprites)
+    source_top_max = max(sprite["bbox"][1] for sprite in sprites)
+    target_top_min = 5
+    target_arc = 50
+
+    scale = min((CELL_WIDTH - 10) / max_width, 1.0)
+    if source_top_max > source_top_min:
+        for sprite in sprites:
+            bbox = sprite["bbox"]
+            mapped_top = target_top_min + (
+                (bbox[1] - source_top_min) / (source_top_max - source_top_min)
+            ) * target_arc
+            scale = min(scale, (CELL_HEIGHT - 5 - mapped_top) / (bbox[3] - bbox[1]))
+    else:
+        scale = min(scale, (CELL_HEIGHT - 10) / max_height)
+
+    state_dir = FRAMES_DIR / "jumping"
+    state_dir.mkdir(parents=True, exist_ok=True)
+    for index, sprite in enumerate(sprites):
+        slot = sprite["slot"]
+        bbox = sprite["bbox"]
+        cropped = slot.crop(bbox)
+        resized = cropped.resize(
+            (
+                max(1, round(cropped.width * scale)),
+                max(1, round(cropped.height * scale)),
+            ),
+            Image.Resampling.LANCZOS,
+        )
+        if source_top_max > source_top_min:
+            top = round(
+                target_top_min
+                + ((bbox[1] - source_top_min) / (source_top_max - source_top_min))
+                * target_arc
+            )
+        else:
+            top = (CELL_HEIGHT - resized.height) // 2
+        left = (CELL_WIDTH - resized.width) // 2
+        frame = Image.new("RGBA", (CELL_WIDTH, CELL_HEIGHT), (0, 0, 0, 0))
+        frame.alpha_composite(resized, (left, top))
+        frame.save(state_dir / f"{index:02d}.png")
+
+    manifest_path = FRAMES_DIR / "frames-manifest.json"
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for row in manifest.get("rows", []):
+            if row.get("state") == "jumping":
+                row["method"] = "slots-preserve-motion"
+        manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def copy_preview_outputs() -> None:
@@ -124,6 +216,7 @@ def main() -> int:
             "auto",
         ]
     )
+    preserve_jumping_motion_frames()
     run(
         [
             sys.executable,

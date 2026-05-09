@@ -9,7 +9,7 @@
 - `pets/red-spark/`：可安装的 Codex 宠物包。
 - `preview/contact-sheet.png`：生成的 QA 联系表。
 - `scripts/build.py`：复用本地 Codex `hatch-pet` skill 脚本，从动作条重新构建图集和包。
-- `scripts/install.ps1`：把宠物包安装到本地 Codex home。
+- `scripts/install.py`：把宠物包安装到本地 Codex home。
 
 ## 构建契约
 
@@ -36,7 +36,7 @@
 编辑后运行：
 
 ```powershell
-.\scripts\build.ps1
+python .\scripts\build.py
 ```
 
 然后检查 `preview/contact-sheet.png`、`preview/validation.json` 和 `preview/review.json`。

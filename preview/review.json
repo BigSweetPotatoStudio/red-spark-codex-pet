@@ -2,7 +2,9 @@
   "ok": true,
   "frames_root": "D:\\projects\\red-spark-codex-pet\\build\\frames",
   "errors": [],
-  "warnings": [],
+  "warnings": [
+    "jumping used extraction method slots-preserve-motion; component extraction is preferred"
+  ],
   "rows": [
     {
       "state": "idle",
@@ -442,85 +444,87 @@
       "state": "jumping",
       "expected_frames": 5,
       "actual_frames": 5,
-      "extraction_method": "components",
+      "extraction_method": "slots-preserve-motion",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "jumping used extraction method slots-preserve-motion; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\jumping\\00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 22930,
+          "nontransparent_pixels": 12815,
           "bbox": [
-            5,
-            6,
-            187,
-            201
+            28,
+            55,
+            163,
+            199
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 343
+          "chroma_adjacent_pixels": 144
         },
         {
           "index": 1,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\jumping\\01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 21250,
+          "nontransparent_pixels": 15474,
           "bbox": [
-            17,
-            5,
-            175,
-            203
+            29,
+            18,
+            163,
+            186
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 249
+          "chroma_adjacent_pixels": 162
         },
         {
           "index": 2,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\jumping\\02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 21507,
+          "nontransparent_pixels": 15214,
           "bbox": [
-            21,
+            33,
             5,
-            171,
-            203
+            158,
+            171
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 236
+          "chroma_adjacent_pixels": 136
         },
         {
           "index": 3,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\jumping\\03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 19160,
+          "nontransparent_pixels": 16013,
           "bbox": [
-            21,
-            5,
-            171,
+            28,
+            22,
+            164,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 254
+          "chroma_adjacent_pixels": 207
         },
         {
           "index": 4,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\jumping\\04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 22895,
+          "nontransparent_pixels": 12790,
           "bbox": [
-            5,
-            6,
-            187,
-            201
+            28,
+            55,
+            163,
+            199
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 295
+          "chroma_adjacent_pixels": 145
         }
       ]
     },
