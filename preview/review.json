@@ -20,90 +20,90 @@
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\idle\\00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17604,
+          "nontransparent_pixels": 18863,
           "bbox": [
-            32,
             5,
-            159,
-            203
+            17,
+            187,
+            190
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 251
+          "chroma_adjacent_pixels": 292
         },
         {
           "index": 1,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\idle\\01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 20664,
+          "nontransparent_pixels": 18569,
           "bbox": [
-            22,
             5,
-            170,
-            203
+            18,
+            187,
+            190
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 313
+          "chroma_adjacent_pixels": 297
         },
         {
           "index": 2,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\idle\\02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 19666,
+          "nontransparent_pixels": 18885,
           "bbox": [
-            22,
             5,
-            170,
-            203
+            18,
+            187,
+            190
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 303
+          "chroma_adjacent_pixels": 316
         },
         {
           "index": 3,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\idle\\03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 19175,
+          "nontransparent_pixels": 18589,
           "bbox": [
-            20,
             5,
-            171,
-            203
+            18,
+            187,
+            190
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 251
+          "chroma_adjacent_pixels": 268
         },
         {
           "index": 4,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\idle\\04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 19264,
+          "nontransparent_pixels": 18684,
           "bbox": [
-            24,
             5,
-            167,
-            203
+            17,
+            187,
+            190
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 243
+          "chroma_adjacent_pixels": 306
         },
         {
           "index": 5,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\idle\\05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17626,
+          "nontransparent_pixels": 18105,
           "bbox": [
-            32,
             5,
-            159,
-            203
+            20,
+            187,
+            188
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 226
+          "chroma_adjacent_pixels": 265
         }
       ]
     },
