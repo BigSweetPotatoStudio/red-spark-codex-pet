@@ -1,47 +1,47 @@
-# Project Guidance
+# 项目指导
 
-This repository packages the Red Spark custom Codex pet.
+本仓库用于打包 Red Spark 自定义 Codex 宠物。
 
-## Important Paths
+## 重要路径
 
-- `assets/action-sheets/`: editable source strips, one PNG per pet state.
-- `docs/hatch-pet-skill.md`: reference copy of the `hatch-pet` skill page.
-- `pets/red-spark/`: installable Codex pet package.
-- `preview/contact-sheet.png`: generated QA sheet.
-- `scripts/build.py`: rebuilds the atlas and package from action sheets by reusing the local Codex `hatch-pet` skill scripts.
-- `scripts/install.ps1`: installs the package into a local Codex home.
+- `assets/action-sheets/`：可编辑的源动作条，每个宠物状态一个 PNG。
+- `docs/hatch-pet-skill.md`：`hatch-pet` skill 页面的参考副本。
+- `pets/red-spark/`：可安装的 Codex 宠物包。
+- `preview/contact-sheet.png`：生成的 QA 联系表。
+- `scripts/build.py`：复用本地 Codex `hatch-pet` skill 脚本，从动作条重新构建图集和包。
+- `scripts/install.ps1`：把宠物包安装到本地 Codex home。
 
-## Build Contract
+## 构建契约
 
-The pet atlas is fixed at `1536x1872`, with `8` columns, `9` rows, and `192x208` cells.
+宠物图集固定为 `1536x1872`，包含 `8` 列、`9` 行，每个格子为 `192x208`。
 
-State order and frame counts:
+状态顺序和帧数：
 
-1. `idle`: 6
-2. `running-right`: 8
-3. `running-left`: 8
-4. `waving`: 4
-5. `jumping`: 5
-6. `failed`: 8
-7. `waiting`: 6
-8. `running`: 6
-9. `review`: 6
+1. `idle`：6
+2. `running-right`：8
+3. `running-left`：8
+4. `waving`：4
+5. `jumping`：5
+6. `failed`：8
+7. `waiting`：6
+8. `running`：6
+9. `review`：6
 
-Do not change these counts unless you also update `scripts/build.py` and verify the Codex app accepts the new layout.
+不要修改这些帧数，除非你同时更新 `scripts/build.py`，并确认 Codex 应用能够接受新的布局。
 
-## Editing Workflow
+## 编辑流程
 
-When changing one animation, edit only the matching file under `assets/action-sheets/`.
-Keep the magenta background removable and keep each pose inside its invisible frame slot.
-After editing, run:
+修改某个动画时，只编辑 `assets/action-sheets/` 下对应的文件。
+保持品红色背景可移除，并让每个姿势都位于自身不可见的帧槽内。
+编辑后运行：
 
 ```powershell
 .\scripts\build.ps1
 ```
 
-Then inspect `preview/contact-sheet.png`, `preview/validation.json`, and `preview/review.json`.
+然后检查 `preview/contact-sheet.png`、`preview/validation.json` 和 `preview/review.json`。
 
-Do not reimplement frame extraction, atlas composition, or validation in this repository unless the upstream `hatch-pet` scripts are unavailable. Use `docs/hatch-pet-skill.md` as the local reference page, and prefer calling:
+除非上游 `hatch-pet` 脚本不可用，否则不要在本仓库重新实现帧提取、图集合成或校验。把 `docs/hatch-pet-skill.md` 作为本地参考页，并优先调用：
 
 - `extract_strip_frames.py`
 - `inspect_frames.py`
@@ -50,12 +50,12 @@ Do not reimplement frame extraction, atlas composition, or validation in this re
 - `make_contact_sheet.py`
 - `package_custom_pet.py`
 
-For this editable-source repository, do not pass `--require-components` to `inspect_frames.py`.
-Generated action strips can legitimately fall back to slot slicing after manual edits; the acceptance check is the final contact sheet plus atlas validation.
+对于这个可编辑源图仓库，调用 `inspect_frames.py` 时不要传入 `--require-components`。
+手动编辑后，生成的动作条可以合法地回退到按槽位切片；验收标准是最终联系表和图集校验结果。
 
-## Visual Constraints
+## 视觉约束
 
-- Keep Red Spark recognizable: red cap, pale hair, red outfit, backpack, mascot charm.
-- Avoid text, UI, labels, frame numbers, shadows, glow, dust, speed lines, and detached effects.
-- Keep props close to the body so frame extraction stays stable.
-- The `running` row means in-progress work, not directional travel.
+- 保持 Red Spark 可识别：红帽、浅色头发、红色服装、背包、吉祥物挂件。
+- 避免文字、UI、标签、帧编号、阴影、发光、尘土、速度线和分离的特效。
+- 让道具贴近身体，以保持帧提取稳定。
+- `running` 行表示工作正在进行，而不是方向性移动。

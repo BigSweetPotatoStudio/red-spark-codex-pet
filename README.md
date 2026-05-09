@@ -1,42 +1,42 @@
-# Red Spark Codex Pet
+# Red Spark Codex 宠物
 
-Red Spark is a custom animated Codex pet: a red-hatted chibi adventurer with a backpack, map, and white mascot bomb.
+Red Spark 是一个自定义 Codex 动态宠物：戴红帽的 Q 版冒险者，带有背包、地图和白色吉祥物挂件。
 
-![Red Spark contact sheet](preview/contact-sheet.png)
+![Red Spark 联系表](preview/contact-sheet.png)
 
-## Install
+## 安装
 
-From this repository:
+在本仓库中运行：
 
 ```powershell
 .\scripts\install.ps1
 ```
 
-Or copy the pet folder manually into your Codex pets directory:
+也可以手动把宠物目录复制到 Codex 的 pets 目录：
 
 ```powershell
 Copy-Item -Recurse -Force .\pets\red-spark "$env:USERPROFILE\.codex\pets\red-spark"
 ```
 
-Then restart Codex or reload the pet list.
+然后重启 Codex，或重新加载宠物列表。
 
-## Edit And Rebuild
+## 编辑和重新构建
 
-The editable source images live in `assets/action-sheets/`.
+可编辑的源图位于 `assets/action-sheets/`。
 
-To change one animation, edit the matching PNG, for example:
+如果只修改一个动画，编辑对应的 PNG，例如：
 
 ```text
 assets/action-sheets/running.png
 ```
 
-Then rebuild the installable pet package:
+然后重新构建可安装的宠物包：
 
 ```powershell
 .\scripts\build.ps1
 ```
 
-The build script reuses the local Codex `hatch-pet` skill scripts and regenerates:
+构建脚本会复用本地 Codex 的 `hatch-pet` skill 脚本，并重新生成：
 
 - `pets/red-spark/pet.json`
 - `pets/red-spark/spritesheet.webp`
@@ -44,55 +44,55 @@ The build script reuses the local Codex `hatch-pet` skill scripts and regenerate
 - `preview/validation.json`
 - `preview/review.json`
 
-After rebuilding, run the install script again:
+重新构建后，再运行一次安装脚本：
 
 ```powershell
 .\scripts\install.ps1
 ```
 
-## Build Requirements
+## 构建要求
 
-- Python 3.10 or newer.
-- Pillow.
-- A local Codex install with the `hatch-pet` skill available at:
+- Python 3.10 或更新版本。
+- Pillow。
+- 本地 Codex 已安装，并且 `hatch-pet` skill 位于：
 
 ```text
 %USERPROFILE%\.codex\skills\hatch-pet
 ```
 
-Install Pillow if needed:
+如需安装 Pillow：
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-## Files
+## 文件
 
-- `assets/action-sheets/*.png`: editable action strip sources.
-- `docs/hatch-pet-skill.md`: reference copy of the Codex `hatch-pet` skill page used to build this pet.
-- `pets/red-spark/pet.json`: pet manifest.
-- `pets/red-spark/spritesheet.webp`: 1536x1872 RGBA sprite atlas.
-- `preview/contact-sheet.png`: QA contact sheet showing all animation states.
-- `preview/validation.json`: atlas validation output.
-- `preview/review.json`: frame extraction and component QA output.
-- `scripts/build.ps1`: rebuild package from source action strips.
-- `scripts/install.ps1`: install to the local Codex pets directory.
-- `AGENTS.md`: project guidance for future Codex work.
+- `assets/action-sheets/*.png`：可编辑的动作条源图。
+- `docs/hatch-pet-skill.md`：用于构建此宠物的 Codex `hatch-pet` skill 页面参考副本。
+- `pets/red-spark/pet.json`：宠物清单文件。
+- `pets/red-spark/spritesheet.webp`：`1536x1872` 的 RGBA 精灵图集。
+- `preview/contact-sheet.png`：展示所有动画状态的 QA 联系表。
+- `preview/validation.json`：图集校验输出。
+- `preview/review.json`：帧提取和组件 QA 输出。
+- `scripts/build.ps1`：从动作条源图重新构建宠物包。
+- `scripts/install.ps1`：安装到本地 Codex pets 目录。
+- `AGENTS.md`：供后续 Codex 工作使用的项目指导。
 
-## Animation States
+## 动画状态
 
-- `idle`: energetic idle loop.
-- `running-right`: rightward run.
-- `running-left`: leftward run.
-- `waving`: cheerful greeting.
-- `jumping`: happy jump.
-- `failed`: small failure reaction.
-- `waiting`: patient waiting loop.
-- `running`: in-progress action with a white mascot bomb.
-- `review`: checking a small map from the backpack.
+- `idle`：有活力的待机循环。
+- `running-right`：向右奔跑。
+- `running-left`：向左奔跑。
+- `waving`：开心打招呼。
+- `jumping`：开心跳跃。
+- `failed`：轻微失败反应。
+- `waiting`：耐心等待循环。
+- `running`：带着白色吉祥物挂件的进行中工作动作。
+- `review`：从背包中取出小地图进行检查。
 
-## Notes
+## 备注
 
-The final atlas validates as `1536x1872`, `RGBA`, with no validation errors or warnings.
+最终图集已通过校验：尺寸为 `1536x1872`，格式为 `RGBA`，没有校验错误或警告。
 
-`docs/hatch-pet-skill.md` is included for reference. The build still calls the installed local skill scripts from `%USERPROFILE%\.codex\skills\hatch-pet\scripts`.
+`docs/hatch-pet-skill.md` 作为参考随仓库保存。实际构建仍会调用 `%USERPROFILE%\.codex\skills\hatch-pet\scripts` 下已安装的本地 skill 脚本。

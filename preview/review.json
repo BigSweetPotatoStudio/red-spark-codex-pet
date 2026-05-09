@@ -119,94 +119,19 @@
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17212,
+          "nontransparent_pixels": 14897,
           "bbox": [
-            18,
+            31,
             5,
-            173,
+            161,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 322
+          "chroma_adjacent_pixels": 188
         },
         {
           "index": 1,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16053,
-          "bbox": [
-            20,
-            5,
-            172,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 262
-        },
-        {
-          "index": 2,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16871,
-          "bbox": [
-            21,
-            5,
-            170,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 348
-        },
-        {
-          "index": 3,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16862,
-          "bbox": [
-            22,
-            5,
-            170,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 298
-        },
-        {
-          "index": 4,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 17110,
-          "bbox": [
-            19,
-            5,
-            172,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 325
-        },
-        {
-          "index": 5,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16522,
-          "bbox": [
-            21,
-            5,
-            170,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 318
-        },
-        {
-          "index": 6,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 15905,
@@ -220,19 +145,94 @@
           "chroma_adjacent_pixels": 302
         },
         {
+          "index": 2,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16522,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 318
+        },
+        {
+          "index": 3,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17110,
+          "bbox": [
+            19,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 325
+        },
+        {
+          "index": 4,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16862,
+          "bbox": [
+            22,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 298
+        },
+        {
+          "index": 5,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16871,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 348
+        },
+        {
+          "index": 6,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16053,
+          "bbox": [
+            20,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 262
+        },
+        {
           "index": 7,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-right\\07.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14897,
+          "nontransparent_pixels": 17212,
           "bbox": [
-            31,
+            18,
             5,
-            161,
+            173,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 188
+          "chroma_adjacent_pixels": 322
         }
       ]
     },
@@ -250,94 +250,19 @@
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14897,
+          "nontransparent_pixels": 17212,
           "bbox": [
-            31,
+            18,
             5,
-            161,
+            173,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 188
+          "chroma_adjacent_pixels": 322
         },
         {
           "index": 1,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 15905,
-          "bbox": [
-            25,
-            5,
-            167,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 302
-        },
-        {
-          "index": 2,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16522,
-          "bbox": [
-            21,
-            5,
-            170,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 318
-        },
-        {
-          "index": 3,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 17110,
-          "bbox": [
-            19,
-            5,
-            172,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 325
-        },
-        {
-          "index": 4,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16862,
-          "bbox": [
-            22,
-            5,
-            170,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 298
-        },
-        {
-          "index": 5,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 16871,
-          "bbox": [
-            21,
-            5,
-            170,
-            203
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 348
-        },
-        {
-          "index": 6,
-          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 16053,
@@ -351,19 +276,94 @@
           "chroma_adjacent_pixels": 262
         },
         {
+          "index": 2,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16871,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 348
+        },
+        {
+          "index": 3,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16862,
+          "bbox": [
+            22,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 298
+        },
+        {
+          "index": 4,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17110,
+          "bbox": [
+            19,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 325
+        },
+        {
+          "index": 5,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16522,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 318
+        },
+        {
+          "index": 6,
+          "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15905,
+          "bbox": [
+            25,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 302
+        },
+        {
           "index": 7,
           "file": "D:\\projects\\red-spark-codex-pet\\build\\frames\\running-left\\07.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 17212,
+          "nontransparent_pixels": 14897,
           "bbox": [
-            18,
+            31,
             5,
-            173,
+            161,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 322
+          "chroma_adjacent_pixels": 188
         }
       ]
     },
