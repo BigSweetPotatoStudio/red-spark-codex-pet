@@ -11,6 +11,6 @@ if (!(Test-Path $Source)) {
   throw "Pet package not found: $Source. Run scripts\build.ps1 first."
 }
 
-New-Item -ItemType Directory -Force -Path (Split-Path -Parent $Destination) | Out-Null
-Copy-Item -Recurse -Force -LiteralPath $Source -Destination $Destination
+New-Item -ItemType Directory -Force -Path $Destination | Out-Null
+Copy-Item -Recurse -Force -LiteralPath (Join-Path $Source "*") -Destination $Destination
 Write-Host "Installed Red Spark to $Destination"
