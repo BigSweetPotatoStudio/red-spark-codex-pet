@@ -69,6 +69,7 @@ python -m pip install -r requirements.txt
 ## Files
 
 - `assets/action-sheets/*.png`: editable action strip sources.
+- `docs/hatch-pet-skill.md`: reference copy of the Codex `hatch-pet` skill page used to build this pet.
 - `pets/red-spark/pet.json`: pet manifest.
 - `pets/red-spark/spritesheet.webp`: 1536x1872 RGBA sprite atlas.
 - `preview/contact-sheet.png`: QA contact sheet showing all animation states.
@@ -93,3 +94,5 @@ python -m pip install -r requirements.txt
 ## Notes
 
 The final atlas validates as `1536x1872`, `RGBA`, with no validation errors or warnings.
+
+`docs/hatch-pet-skill.md` is included for reference. The build still calls the installed local skill scripts from `%USERPROFILE%\.codex\skills\hatch-pet\scripts`.

@@ -5,6 +5,7 @@ This repository packages the Red Spark custom Codex pet.
 ## Important Paths
 
 - `assets/action-sheets/`: editable source strips, one PNG per pet state.
+- `docs/hatch-pet-skill.md`: reference copy of the `hatch-pet` skill page.
 - `pets/red-spark/`: installable Codex pet package.
 - `preview/contact-sheet.png`: generated QA sheet.
 - `scripts/build.py`: rebuilds the atlas and package from action sheets by reusing the local Codex `hatch-pet` skill scripts.
@@ -40,7 +41,7 @@ After editing, run:
 
 Then inspect `preview/contact-sheet.png`, `preview/validation.json`, and `preview/review.json`.
 
-Do not reimplement frame extraction, atlas composition, or validation in this repository unless the upstream `hatch-pet` scripts are unavailable. Prefer calling:
+Do not reimplement frame extraction, atlas composition, or validation in this repository unless the upstream `hatch-pet` scripts are unavailable. Use `docs/hatch-pet-skill.md` as the local reference page, and prefer calling:
 
 - `extract_strip_frames.py`
 - `inspect_frames.py`
