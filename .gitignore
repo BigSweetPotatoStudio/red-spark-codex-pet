@@ -6,4 +6,7 @@ Thumbs.db
 
 # Local generated scratch
 tmp/
+build/
 *.log
+__pycache__/
+*.pyc
